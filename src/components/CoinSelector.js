@@ -8,6 +8,7 @@ import Button from '@mui/material/Button'
 import Grid from '@mui/material/Grid'
 
 const includedInSelectedCoins = (selectedCoins, coin) => {
+	console.log("selectedCoins, coin", selectedCoins, coin)
 	for (const selectedCoin of selectedCoins) if(selectedCoin && selectedCoin.name === coin.name) return true
 	return false
 }
@@ -58,7 +59,7 @@ const replaceSelectedCoin = (selectedCoins, previousCoin, newCoin) => {
 
 const handleValueChange = (from, newValue, value, setValue, selectedCoins, setSelectedCoins, baseCoin, setAlreadySelected) => {
 	if(from){
-		if(includedInSelectedCoins(selectedCoins, value)){
+		if(includedInSelectedCoins(selectedCoins, newValue)){
 			setAlreadySelected(true)
 				setTimeout(() => {
 					setAlreadySelected(false)

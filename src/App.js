@@ -55,7 +55,7 @@ const App = () => {
             <CoinSelector
               from={true}
               coins={apiCoins}
-              selectedCoins={baseCoin}
+              selectedCoins={selectedCoins}
               setSelectedCoins={setBaseCoin}
               index={0}
             />
